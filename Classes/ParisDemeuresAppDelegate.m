@@ -101,7 +101,7 @@
     
 	[window addSubview:tabBarController.view];
     
-    imagePresentation = [[[UIImageView alloc] autorelease] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    /*imagePresentation = [[[UIImageView alloc] autorelease] initWithImage:[UIImage imageNamed:@"Default.png"]];
     [tabBarController.view addSubview:imagePresentation];
     [UIView beginAnimations:@"ImagePresentation" context:nil];
     [UIView setAnimationBeginsFromCurrentState:YES];
@@ -110,7 +110,7 @@
     [UIView setAnimationDelay:2.0];
     [UIView setAnimationDuration:4];
     [imagePresentation setAlpha:0.0];
-    [UIView commitAnimations];
+    [UIView commitAnimations];*/
     
     [window makeKeyAndVisible];
 	

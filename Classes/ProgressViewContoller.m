@@ -23,6 +23,7 @@
 - (void)dealloc
 {
     [indic release];
+    [waitLabel release];
     [super dealloc];
 }
 
@@ -50,12 +51,27 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
+    self.view.layer.cornerRadius = 20;
     
-    indic = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 170, 30, 30)];
+    [self.view setFrame:CGRectMake(100, 130, 150, 150)];
+    
+    indic = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [indic setCenter:CGPointMake(75, 75)];
     
     [self.view addSubview:indic];
     
     [indic startAnimating];
+    
+    waitLabel = [[UILabel alloc] init];
+    waitLabel.text = @"Chargement en cours...";
+    waitLabel.backgroundColor = [UIColor clearColor];
+    waitLabel.textAlignment = UITextAlignmentCenter;
+    waitLabel.textColor = [UIColor whiteColor];
+    waitLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:12];
+    
+    [waitLabel setFrame:CGRectMake(0, 100, 150, 25)];
+    
+    [self.view addSubview:waitLabel];
 }
 
 - (void)viewDidUnload
