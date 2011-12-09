@@ -53,7 +53,7 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
     self.view.layer.cornerRadius = 20;
     
-    [self.view setFrame:CGRectMake(100, 130, 150, 150)];
+    [self.view setFrame:CGRectMake(80, 130, 150, 150)];
     
     indic = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [indic setCenter:CGPointMake(75, 75)];

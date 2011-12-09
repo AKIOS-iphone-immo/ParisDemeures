@@ -182,7 +182,7 @@
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
     pvc = [[ProgressViewContoller alloc] init];
-    [pvc.view setFrame:CGRectMake(0, 0, 320, 480)];
+    //[pvc.view setFrame:CGRectMake(0, 0, 320, 480)];
     [self.view addSubview:pvc.view];
     
     [pool release];
@@ -390,6 +390,8 @@
     
     NSLog(@"Connection failed! Error - %@",
           [error localizedDescription]);
+    
+    [pvc.view removeFromSuperview];
     
     if (!isConnectionErrorPrinted) {
         alert = [[UIAlertView alloc] initWithTitle:@"Erreur de connection."
